@@ -7,11 +7,11 @@ st.set_page_config(page_title="全球语通 - 多语言词典", page_icon="🌍"
 
 # 2. 定义词典文件映射 (确保文件名和你文件夹里的一模一样)
 DICTIONARY_MAP = {
-    "日语 ➔ 中文": "kaikki.org-dictionary-日语.jsonl",
-    "西班牙语 ➔ 中文": "kaikki.org-dictionary-西班牙语.jsonl",
-    "日语 ➔ 韩语": "kaikki.org-dictionary-일본어.jsonl",
-    "西班牙语 ➔ 韩语": "kaikki.org-dictionary-스페인어.jsonl",
-    "中文 ➔ 韩语": "kaikki.org-dictionary-중국어.jsonl"
+    "日语 ➔ 中文": "small_kaikki.org-dictionary-日语.jsonl",
+    "西班牙语 ➔ 中文": "small_kaikki.org-dictionary-西班牙语.jsonl",
+    "日语 ➔ 韩语": "small_kaikki.org-dictionary-일본어.jsonl",
+    "西班牙语 ➔ 韩语": "small_kaikki.org-dictionary-스페인어.jsonl",
+    "中文 ➔ 韩语": "small_kaikki.org-dictionary-중국어.jsonl"
 }
 
 # 3. 侧边栏：语言切换器
