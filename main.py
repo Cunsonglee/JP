@@ -21,7 +21,12 @@ current_file = DICTIONARY_MAP[selected_lang]
 
 # 4. 加载数据的函数（增加缓存）
 @st.cache_data
-def load_data(file_path):
+def load_data(file_name):
+    # 🌟【关键修复】：自动获取 main.py 所在的文件夹路径
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # 将文件夹路径和文件名拼接起来，这样不管终端在哪，都不会找错位置
+    file_path = os.path.join(current_dir, file_name)
+    
     if not os.path.exists(file_path):
         return None
     
@@ -39,7 +44,7 @@ with st.spinner(f"正在准备 {selected_lang} 数据..."):
     words_data = load_data(current_file)
 
 if words_data is None:
-    st.error(f"未找到文件: `{current_file}`。请确保它在项目根目录下。")
+    st.error(f"未找到文件: `{current_file}`。请确保它和 main.py 放在同一个文件夹里！")
 else:
     # 搜索框
     query = st.text_input(f"在 {selected_lang} 中搜索：", placeholder="输入单词或含义...")
